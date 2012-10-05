@@ -12,6 +12,7 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
+	"html"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -72,6 +73,6 @@ func main() {
 		log.Fatal(err)
 	}
 	for _, t := range r.Data.Translations {
-		fmt.Printf("%s (%s)\n", t.TranslatedText, t.DetectedSourceLanguage)
+		fmt.Printf("%s (%s)\n", html.UnescapeString(t.TranslatedText), t.DetectedSourceLanguage)
 	}
 }
