@@ -6,7 +6,7 @@
 // its arguments. By default it auto-detects the input language and translates
 // to English.
 
-package main
+package main // import "robpike.io/cmd/translate"
 
 import (
 	"encoding/json"
